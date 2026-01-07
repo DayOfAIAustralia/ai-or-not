@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "name": "TikTok videos that change based on what you watch",
+      "isAI": true
+    },
+    {
+      "name": "Snapchat filter that changes your face",
+      "isAI": true
+    },
+    {
+      "name": "Voice on a smart speaker answering questions",
+      "isAI": true
+    },
+    {
+      "name": "Video game character that learns how you play",
+      "isAI": true
+    },
+    {
+      "name": "Robot vacuum cleaner moving by itself",
+      "isAI": true
+    },
+    {
+      "name": "Automatic captions on YouTube videos",
+      "isAI": true
+    },
+    {
+      "name": "Phone unlocking with your face",
+      "isAI": true
+    },
+    {
+      "name": "Translation app that listens and speaks in another language",
+      "isAI": true
+    },
+    {
+      "name": "A storybook you read at home",
+      "isAI": false
+    },
+    {
+      "name": "A bicycle you ride to school",
+      "isAI": false
+    },
+    {
+      "name": "A toaster that browns bread",
+      "isAI": false
+    },
+    {
+      "name": "A radio that plays music when you turn it on",
+      "isAI": false
+    },
+    {
+      "name": "A regular TV remote",
+      "isAI": false
+    },
+    {
+      "name": "A printed photo album",
+      "isAI": false
+    },
+    {
+      "name": "A flashlight that turns on with a switch",
+      "isAI": false
+    },
+    {
+      "name": "A clock with hands that tick",
+      "isAI": false
+    }
+  ]
+}
