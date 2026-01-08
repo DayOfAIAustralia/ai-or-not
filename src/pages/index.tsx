@@ -6,6 +6,7 @@ import itemsData from "@/items.json";
 interface Item {
   name: string;
   isAI: boolean;
+  explanation: string;
 }
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -19,7 +20,9 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function IndexPage() {
   const [gameStarted, setGameStarted] = useState(false);
-  const [items, setItems] = useState<Item[]>(() => shuffleArray(itemsData.items));
+  const [items, setItems] = useState<Item[]>(() =>
+    shuffleArray(itemsData.items)
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -61,23 +64,25 @@ export default function IndexPage() {
   if (!gameStarted) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-blue/10 to-pink/10">
-        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-8 md:p-12 max-w-lg">
+        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-lg border-2 border-gray-200 dark:border-gray-700 p-8 md:p-12 max-w-lg">
           <h1 className="text-4xl md:text-5xl font-bold mb-2">
-            <span className="text-blue">AI</span>
-            <span className="text-gray-600 dark:text-gray-400"> or </span>
-            <span className="text-pink">Not AI</span>
-            <span className="text-yellow">?</span>
+            <span className="text-blue">AI or Not AI?</span>
           </h1>
 
           <div className="space-y-4 my-8 text-lg">
             <p>
-              Some things use <span className="font-bold text-blue">AI</span> (Artificial Intelligence) and some don't.
+              Some things use <span className="font-bold text-blue">AI</span>{" "}
+              (Artificial Intelligence) and some don't.
             </p>
-            <p className="text-xl font-semibold text-pink">Can you tell which is which?</p>
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 text-base">
+            <p className="text-xl font-semibold text-pink">
+              Can you tell which is which?
+            </p>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 text-base border border-gray-200 dark:border-gray-700">
               <p className="text-gray-600 dark:text-gray-400">
-                Tap <span className="font-bold text-green">"AI"</span> if you think it uses AI, or{" "}
-                <span className="font-bold text-pink">"Not AI"</span> if it doesn't.
+                Tap <span className="font-bold text-green">"AI"</span> if you
+                think it uses AI, or{" "}
+                <span className="font-bold text-pink">"Not AI"</span> if it
+                doesn't.
               </p>
             </div>
           </div>
@@ -100,12 +105,12 @@ export default function IndexPage() {
     const percentage = Math.round((score / items.length) * 100);
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-green/10 to-yellow/10">
-        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-8 md:p-12 max-w-lg">
+        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-lg border-2 border-gray-200 dark:border-gray-700 p-8 md:p-12 max-w-lg">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue">
             Game Over!
           </h1>
 
-          <div className="bg-yellow/20 rounded-2xl p-6 mb-8">
+          <div className="bg-yellow/20 rounded-2xl p-6 mb-8 border-2 border-yellow/30">
             <p className="text-xl mb-2">You got</p>
             <p className="text-5xl font-bold text-green mb-2">
               {score} / {items.length}
@@ -119,10 +124,10 @@ export default function IndexPage() {
             {percentage === 100
               ? "🎉 Perfect score! Amazing!"
               : percentage >= 75
-              ? "🌟 Great job!"
-              : percentage >= 50
-              ? "👍 Good effort!"
-              : "Keep learning about AI!"}
+                ? "🌟 Great job!"
+                : percentage >= 50
+                  ? "👍 Good effort!"
+                  : "Keep learning about AI!"}
           </p>
 
           <Button
@@ -141,7 +146,7 @@ export default function IndexPage() {
   // Game Screen
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-blue/5 to-pink/5">
-      <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-6 md:p-10 max-w-lg w-full">
+      <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-lg border-2 border-gray-200 dark:border-gray-700 p-6 md:p-10 max-w-lg w-full">
         {/* Progress */}
         <div className="flex items-center justify-between mb-6">
           <span className="text-sm font-medium text-gray-500">
@@ -156,15 +161,13 @@ export default function IndexPage() {
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-8">
           <div
             className="bg-blue h-2 rounded-full transition-all duration-300"
-            style={{ width: `${((currentIndex) / items.length) * 100}%` }}
+            style={{ width: `${(currentIndex / items.length) * 100}%` }}
           />
         </div>
 
         {/* Question */}
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 mb-8">
-          <h1 className="text-xl md:text-2xl font-bold">
-            {currentItem.name}
-          </h1>
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 mb-8 border border-gray-200 dark:border-gray-700">
+          <h1 className="text-xl md:text-2xl font-bold">{currentItem.name}</h1>
         </div>
 
         {!showResult ? (
@@ -190,22 +193,29 @@ export default function IndexPage() {
           /* Result Feedback */
           <div className="space-y-4">
             <div
-              className={`rounded-2xl p-6 ${
+              className={`rounded-2xl p-6 border-2 ${
                 lastAnswerCorrect
-                  ? "bg-green/20"
-                  : "bg-orange/20"
+                  ? "bg-green/20 border-green/30"
+                  : "bg-orange/20 border-orange/30"
               }`}
             >
-              <p className={`text-3xl font-bold mb-2 ${
-                lastAnswerCorrect ? "text-green" : "text-orange"
-              }`}>
+              <p
+                className={`text-3xl font-bold mb-2 ${
+                  lastAnswerCorrect ? "text-green" : "text-orange"
+                }`}
+              >
                 {lastAnswerCorrect ? "Correct! ✓" : "Not quite ✗"}
               </p>
-              <p className="text-lg">
+              <p className="text-lg mb-3">
                 {currentItem.name} is{" "}
-                <span className={`font-bold ${currentItem.isAI ? "text-green" : "text-pink"}`}>
+                <span
+                  className={`font-bold ${currentItem.isAI ? "text-green" : "text-pink"}`}
+                >
                   {currentItem.isAI ? "AI" : "Not AI"}
                 </span>
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-left">
+                {currentItem.explanation}
               </p>
             </div>
 

@@ -2,67 +2,83 @@
   "items": [
     {
       "name": "TikTok videos that change based on what you watch",
-      "isAI": true
+      "isAI": true,
+      "explanation": "TikTok uses AI to learn what videos you like and recommends similar ones. It watches what you watch, like, and skip to figure out your preferences."
     },
     {
       "name": "Snapchat filter that changes your face",
-      "isAI": true
+      "isAI": true,
+      "explanation": "Snapchat filters use AI to detect your face, find your eyes, nose, and mouth, then add effects that move with you in real-time."
     },
     {
       "name": "Voice on a smart speaker answering questions",
-      "isAI": true
+      "isAI": true,
+      "explanation": "Smart speakers like Alexa and Google Home use AI to understand your voice, figure out what you're asking, and find the right answer."
     },
     {
       "name": "Video game character that learns how you play",
-      "isAI": true
+      "isAI": true,
+      "explanation": "Some video games use AI to make characters smarter. They learn your playing style and adapt to make the game more challenging or fun."
     },
     {
       "name": "Robot vacuum cleaner moving by itself",
-      "isAI": true
+      "isAI": true,
+      "explanation": "Robot vacuums use AI to map your home, avoid obstacles, and figure out the best path to clean every spot without getting stuck."
     },
     {
       "name": "Automatic captions on YouTube videos",
-      "isAI": true
+      "isAI": true,
+      "explanation": "YouTube uses AI called speech recognition to listen to videos and automatically write out what people are saying as text captions."
     },
     {
       "name": "Phone unlocking with your face",
-      "isAI": true
+      "isAI": true,
+      "explanation": "Face unlock uses AI to recognise your unique facial features. It can tell the difference between you and other people, or even a photo of you!"
     },
     {
       "name": "Translation app that listens and speaks in another language",
-      "isAI": true
+      "isAI": true,
+      "explanation": "Translation apps use AI to understand speech in one language and convert it to another. They learn from millions of translated sentences."
     },
     {
       "name": "A storybook you read at home",
-      "isAI": false
+      "isAI": false,
+      "explanation": "A printed storybook is just paper with ink. It doesn't learn, change, or respond to you - the words stay the same every time you read it."
     },
     {
       "name": "A bicycle you ride to school",
-      "isAI": false
+      "isAI": false,
+      "explanation": "A bicycle is powered by you! It uses simple machines like gears, chains, and wheels - no computer brain needed."
     },
     {
       "name": "A toaster that browns bread",
-      "isAI": false
+      "isAI": false,
+      "explanation": "A toaster uses a simple timer and heating element. It doesn't learn or think - it just heats up for the time you set."
     },
     {
       "name": "A radio that plays music when you turn it on",
-      "isAI": false
+      "isAI": false,
+      "explanation": "A basic radio receives signals from radio stations and converts them to sound. It doesn't make decisions or learn your preferences."
     },
     {
       "name": "A regular TV remote",
-      "isAI": false
+      "isAI": false,
+      "explanation": "A TV remote just sends simple signals to your TV when you press buttons. It doesn't understand or learn anything."
     },
     {
       "name": "A printed photo album",
-      "isAI": false
+      "isAI": false,
+      "explanation": "A photo album is just printed pictures in a book. Unlike phone photos apps, it can't recognise faces or organise pictures automatically."
     },
     {
       "name": "A flashlight that turns on with a switch",
-      "isAI": false
+      "isAI": false,
+      "explanation": "A flashlight is a simple circuit - flip the switch, and electricity flows to make light. No thinking involved!"
     },
     {
       "name": "A clock with hands that tick",
-      "isAI": false
+      "isAI": false,
+      "explanation": "An analog clock uses gears and springs (or a small motor) to move the hands. It tells time through mechanical movement, not intelligence."
     }
   ]
 }
