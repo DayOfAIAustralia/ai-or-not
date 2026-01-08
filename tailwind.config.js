@@ -11,6 +11,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Karla', 'sans-serif'],
+      },
       colors: {
         green: "#2EB063",
         pink: "#CB599B",
