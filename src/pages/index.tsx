@@ -66,8 +66,8 @@ export default function IndexPage() {
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-20 text-center bg-gradient-to-b from-blue/10 to-pink/10">
-          <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-lg border-2 border-gray-200 dark:border-gray-700 p-10 md:p-16 max-w-2xl">
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-20 text-center bg-yellow">
+          <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-4 border-gray-900 p-10 md:p-16 max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-2">
               <span className="text-blue">AI or Not AI?</span>
             </h1>
@@ -80,7 +80,7 @@ export default function IndexPage() {
               <p className="text-2xl font-semibold text-pink">
                 Can you tell which is which?
               </p>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 text-lg border border-gray-200 dark:border-gray-700">
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 text-lg border-2 border-gray-900">
                 <p className="text-gray-600 dark:text-gray-400">
                   Tap <span className="font-bold text-green">"AI"</span> if you
                   think it uses AI, or{" "}
@@ -93,7 +93,7 @@ export default function IndexPage() {
             <Button
               color="primary"
               size="lg"
-              className="text-2xl px-14 py-8 font-bold"
+              className="text-2xl px-14 py-8 font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
               onPress={handleStartGame}
             >
               Play!
@@ -110,13 +110,13 @@ export default function IndexPage() {
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-20 text-center bg-gradient-to-b from-green/10 to-yellow/10">
-          <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-lg border-2 border-gray-200 dark:border-gray-700 p-10 md:p-16 max-w-2xl">
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-20 text-center bg-yellow">
+          <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-4 border-gray-900 p-10 md:p-16 max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-blue">
               Game Over!
             </h1>
 
-            <div className="bg-yellow/20 rounded-2xl p-8 mb-8 border-2 border-yellow/30">
+            <div className="bg-white rounded-2xl p-8 mb-8 border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]">
               <p className="text-2xl mb-2">You got</p>
               <p className="text-6xl font-bold text-green mb-2">
                 {score} / {items.length}
@@ -139,7 +139,7 @@ export default function IndexPage() {
             <Button
               color="primary"
               size="lg"
-              className="text-2xl px-12 py-8 font-bold"
+              className="text-2xl px-12 py-8 font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
               onPress={handlePlayAgain}
             >
               Play Again
@@ -154,8 +154,8 @@ export default function IndexPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-20 text-center bg-gradient-to-b from-blue/5 to-pink/5">
-        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-lg border-2 border-gray-200 dark:border-gray-700 p-8 md:p-12 max-w-2xl w-full">
+      <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-20 text-center bg-yellow">
+        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-4 border-gray-900 p-8 md:p-12 max-w-2xl w-full">
           {/* Progress */}
           <div className="flex items-center justify-between mb-6">
             <span className="text-base font-medium text-gray-500">
@@ -167,7 +167,7 @@ export default function IndexPage() {
           </div>
 
           {/* Progress Bar */}
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 mb-8">
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-8 border-2 border-gray-900">
             <div
               className="bg-blue h-3 rounded-full transition-all duration-300"
               style={{ width: `${(currentIndex / items.length) * 100}%` }}
@@ -175,7 +175,7 @@ export default function IndexPage() {
           </div>
 
           {/* Question */}
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-8 border border-gray-200 dark:border-gray-700">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-8 border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]">
             <h1 className="text-2xl md:text-3xl font-bold">
               {currentItem.name}
             </h1>
@@ -187,14 +187,14 @@ export default function IndexPage() {
               <Button
                 color="secondary"
                 size="lg"
-                className="text-2xl px-10 py-8 font-bold flex-1 max-w-[180px]"
+                className="text-2xl px-10 py-8 font-bold flex-1 max-w-[180px] border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                 onPress={() => handleAnswer(true)}
               >
                 AI
               </Button>
               <Button
                 size="lg"
-                className="text-2xl px-10 py-8 font-bold flex-1 max-w-[180px] bg-pink text-white"
+                className="text-2xl px-10 py-8 font-bold flex-1 max-w-[180px] bg-pink text-white border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                 onPress={() => handleAnswer(false)}
               >
                 Not AI
@@ -204,10 +204,10 @@ export default function IndexPage() {
             /* Result Feedback */
             <div className="space-y-6">
               <div
-                className={`rounded-2xl p-8 border-2 ${
+                className={`rounded-2xl p-8 border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] ${
                   lastAnswerCorrect
-                    ? "bg-green/20 border-green/30"
-                    : "bg-orange/20 border-orange/30"
+                    ? "bg-green/20"
+                    : "bg-orange/20"
                 }`}
               >
                 <p
@@ -233,7 +233,7 @@ export default function IndexPage() {
               <Button
                 color="primary"
                 size="lg"
-                className="text-2xl px-12 py-8 font-bold"
+                className="text-2xl px-12 py-8 font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                 onPress={handleNext}
               >
                 Next →
