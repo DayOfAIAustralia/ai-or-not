@@ -20,12 +20,11 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function IndexPage() {
+  const [yearLevel, setYearLevel] = useState<'primary' | 'secondary' | null>(null);
   const [gameStarted, setGameStarted] = useState(false);
   const [currentLevel, setCurrentLevel] = useState(1);
   const [showLevelIntro, setShowLevelIntro] = useState(false);
-  const [items, setItems] = useState<Item[]>(() =>
-    shuffleArray(itemsData.items)
-  );
+  const [items, setItems] = useState<Item[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -35,11 +34,17 @@ export default function IndexPage() {
   const isGameOver = currentIndex >= items.length;
 
   const getLevelItems = (level: number): Item[] => {
-    return level === 1 ? itemsData.items : (itemsData as { items: Item[]; level2: Item[] }).level2;
+    const questionSet = yearLevel === 'primary'
+      ? itemsData.primary
+      : itemsData.secondary;
+    return level === 1 ? questionSet.level1 : questionSet.level2;
   };
 
   const handleStartGame = () => {
-    setItems(shuffleArray(itemsData.items));
+    const questions = yearLevel === 'primary'
+      ? itemsData.primary.level1
+      : itemsData.secondary.level1;
+    setItems(shuffleArray(questions));
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
@@ -84,7 +89,8 @@ export default function IndexPage() {
     setGameStarted(false);
     setCurrentLevel(1);
     setShowLevelIntro(false);
-    setItems(shuffleArray(itemsData.items));
+    setYearLevel(null);
+    setItems([]);
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
@@ -119,10 +125,42 @@ export default function IndexPage() {
               </div>
             </div>
 
+            {/* Year Level Selector */}
+            <div className="mb-6">
+              <p className="text-lg font-medium mb-3 text-gray-700 dark:text-gray-300">
+                Select your year level:
+              </p>
+              <div className="flex gap-4 justify-center flex-wrap">
+                <Button
+                  size="lg"
+                  className={`text-lg px-6 py-6 font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all ${
+                    yearLevel === 'primary'
+                      ? 'bg-green text-white'
+                      : 'bg-white text-gray-900'
+                  }`}
+                  onPress={() => setYearLevel('primary')}
+                >
+                  Primary (Years 3-6)
+                </Button>
+                <Button
+                  size="lg"
+                  className={`text-lg px-6 py-6 font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all ${
+                    yearLevel === 'secondary'
+                      ? 'bg-green text-white'
+                      : 'bg-white text-gray-900'
+                  }`}
+                  onPress={() => setYearLevel('secondary')}
+                >
+                  Secondary (Years 7-10)
+                </Button>
+              </div>
+            </div>
+
             <Button
               color="primary"
               size="lg"
               className="text-2xl px-14 py-8 font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+              isDisabled={yearLevel === null}
               onPress={handleStartGame}
             >
               Play!
