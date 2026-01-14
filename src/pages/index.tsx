@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@heroui/button";
 
 import itemsData from "@/items.json";
@@ -31,9 +31,69 @@ export default function IndexPage() {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<number>(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const currentItem = items[currentIndex];
   const isGameOver = currentIndex >= items.length;
+
+  // Timer duration: Primary = 15s, Secondary = 10s
+  const getTimerDuration = () => {
+    return yearLevel === "primary" ? 15 : 10;
+  };
+
+  // Handle time running out
+  const handleTimeUp = () => {
+    setLastAnswerCorrect(false);
+    setShowResult(true);
+  };
+
+  // Timer countdown effect
+  useEffect(() => {
+    // Clear any existing timer
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+
+    // Only run timer during active gameplay
+    if (!gameStarted || showResult || isGameOver || showLevelIntro) {
+      return;
+    }
+
+    // Reset timer for new question
+    const duration = getTimerDuration();
+    setTimeLeft(duration);
+
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          // Time's up
+          if (timerRef.current) {
+            clearInterval(timerRef.current);
+            timerRef.current = null;
+          }
+          handleTimeUp();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, [
+    currentIndex,
+    gameStarted,
+    showResult,
+    showLevelIntro,
+    isGameOver,
+    yearLevel,
+  ]);
 
   const getLevelItems = (level: number): Item[] => {
     const questionSet =
@@ -301,12 +361,37 @@ export default function IndexPage() {
           </div>
 
           {/* Progress Bar */}
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 md:h-4 mb-4 md:mb-8 border-2 border-gray-900">
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 md:h-4 mb-3 md:mb-4 border-2 border-gray-900">
             <div
               className="bg-blue h-2 md:h-3 rounded-full transition-all duration-300"
               style={{ width: `${(currentIndex / items.length) * 100}%` }}
             />
           </div>
+
+          {/* Timer - only show when answering */}
+          {!showResult && (
+            <div className="mt-8 mb-4 md:mb-6">
+              <div className="flex justify-between items-center mb-1">
+                <span className="text-xs md:text-sm font-medium text-gray-600">
+                  Time
+                </span>
+                <span
+                  className={`text-sm md:text-base font-bold ${timeLeft <= 3 ? "text-red-500" : "text-gray-700"}`}
+                >
+                  00:{timeLeft < 10 ? "0" + timeLeft : timeLeft}
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2 md:h-3 border border-gray-900">
+                <div
+                  key={currentIndex}
+                  className={`h-full rounded-full transition-all duration-1000 ease-linear ${
+                    timeLeft <= 3 ? "bg-red-500" : "bg-green"
+                  }`}
+                  style={{ width: `${(timeLeft / getTimerDuration()) * 100}%` }}
+                />
+              </div>
+            </div>
+          )}
 
           {/* Question */}
           <div className="bg-gray-50 dark:bg-gray-800 rounded-xl md:rounded-2xl p-4 md:p-8 mb-4 md:mb-8 border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]">
