@@ -20,7 +20,9 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function IndexPage() {
-  const [yearLevel, setYearLevel] = useState<'primary' | 'secondary' | null>(null);
+  const [yearLevel, setYearLevel] = useState<"primary" | "secondary" | null>(
+    null
+  );
   const [gameStarted, setGameStarted] = useState(false);
   const [currentLevel, setCurrentLevel] = useState(1);
   const [showLevelIntro, setShowLevelIntro] = useState(false);
@@ -34,16 +36,16 @@ export default function IndexPage() {
   const isGameOver = currentIndex >= items.length;
 
   const getLevelItems = (level: number): Item[] => {
-    const questionSet = yearLevel === 'primary'
-      ? itemsData.primary
-      : itemsData.secondary;
+    const questionSet =
+      yearLevel === "primary" ? itemsData.primary : itemsData.secondary;
     return level === 1 ? questionSet.level1 : questionSet.level2;
   };
 
   const handleStartGame = () => {
-    const questions = yearLevel === 'primary'
-      ? itemsData.primary.level1
-      : itemsData.secondary.level1;
+    const questions =
+      yearLevel === "primary"
+        ? itemsData.primary.level1
+        : itemsData.secondary.level1;
     setItems(shuffleArray(questions));
     setCurrentIndex(0);
     setScore(0);
@@ -134,22 +136,22 @@ export default function IndexPage() {
                 <Button
                   size="lg"
                   className={`text-sm md:text-lg px-3 md:px-6 py-3 md:py-6 font-bold border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all ${
-                    yearLevel === 'primary'
-                      ? 'bg-green text-white'
-                      : 'bg-white text-gray-900'
+                    yearLevel === "primary"
+                      ? "bg-green text-white"
+                      : "bg-white text-gray-900"
                   }`}
-                  onPress={() => setYearLevel('primary')}
+                  onPress={() => setYearLevel("primary")}
                 >
                   Primary (Years 3-6)
                 </Button>
                 <Button
                   size="lg"
                   className={`text-sm md:text-lg px-3 md:px-6 py-3 md:py-6 font-bold border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all ${
-                    yearLevel === 'secondary'
-                      ? 'bg-green text-white'
-                      : 'bg-white text-gray-900'
+                    yearLevel === "secondary"
+                      ? "bg-green text-white"
+                      : "bg-white text-gray-900"
                   }`}
-                  onPress={() => setYearLevel('secondary')}
+                  onPress={() => setYearLevel("secondary")}
                 >
                   Secondary (Years 7-10)
                 </Button>
@@ -187,15 +189,16 @@ export default function IndexPage() {
 
             <div className="space-y-3 md:space-y-4 my-4 md:my-8 text-base md:text-xl">
               <p>
-                Great job on Level 1! Now let's see if you can tell which things are{" "}
-                <span className="font-bold text-green">AI-Powered</span> and which are not!
+                Great job on Level 1! Now let's see if you can tell which things
+                are <span className="font-bold text-green">AI-Powered</span> and
+                which are not!
               </p>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-3 md:p-4 text-sm md:text-lg border-2 border-gray-900">
                 <p className="text-gray-600 dark:text-gray-400">
-                  Tap <span className="font-bold text-green">"AI-Powered"</span> if you
-                  think the item uses AI, or{" "}
-                  <span className="font-bold text-pink">"Not AI-Powered"</span> if it
-                  doesn't.
+                  Tap <span className="font-bold text-green">"AI-Powered"</span>{" "}
+                  if you think the item uses AI, or{" "}
+                  <span className="font-bold text-pink">"Not AI-Powered"</span>{" "}
+                  if it doesn't.
                 </p>
               </div>
             </div>
@@ -220,7 +223,7 @@ export default function IndexPage() {
     return (
       <>
         <Navbar />
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 pt-16 md:pt-20 text-center bg-yellow">
+        <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 pt-20 mt-8 md:pt-28 text-center bg-yellow">
           <div className="bg-white dark:bg-gray-900 rounded-2xl md:rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-3 md:border-4 border-gray-900 p-5 md:p-10 lg:p-16 max-w-2xl">
             <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-blue">
               {currentLevel === 1 ? "Level 1 Complete!" : "Level 2 Complete!"}
@@ -336,9 +339,7 @@ export default function IndexPage() {
             <div className="space-y-4 md:space-y-6">
               <div
                 className={`rounded-xl md:rounded-2xl p-4 md:p-8 border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] ${
-                  lastAnswerCorrect
-                    ? "bg-green/20"
-                    : "bg-orange/20"
+                  lastAnswerCorrect ? "bg-green/20" : "bg-orange/20"
                 }`}
               >
                 <p
@@ -354,8 +355,12 @@ export default function IndexPage() {
                     className={`font-bold ${currentItem.isAI ? "text-green" : "text-pink"}`}
                   >
                     {currentLevel === 1
-                      ? (currentItem.isAI ? "AI" : "Not AI")
-                      : (currentItem.isAI ? "AI-Powered" : "Not AI-Powered")}
+                      ? currentItem.isAI
+                        ? "AI"
+                        : "Not AI"
+                      : currentItem.isAI
+                        ? "AI-Powered"
+                        : "Not AI-Powered"}
                   </span>
                 </p>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 text-left">
