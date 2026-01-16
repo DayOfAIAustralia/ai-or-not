@@ -126,11 +126,7 @@ const timerDuration = yearLevel === "primary" ? 15 : 10;
 
 ## Deployment
 
-Build the project and deploy the `dist/` directory to any static hosting service:
-
-- **Vercel**: Connect your Git repository for automatic deployments
-- **Netlify**: Drag and drop the `dist/` folder or connect Git
-- **GitHub Pages**: Use `gh-pages` or GitHub Actions
+Currently deployed with Vercel, domain on GoDaddy - https://ai-or-not.dayofaiaustralia.com/ 
 
 ## Scripts
 
