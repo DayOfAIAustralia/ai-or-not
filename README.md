@@ -1,15 +1,7 @@
 # AI or Not?
 
-An educational game that teaches students to distinguish between AI-powered technology and non-AI technology. Designed for Day of AI activities targeting Primary (Years 3-6) and Secondary (Years 7-10) students.
-
-## Features
-
-- **Year Level Selector** - Age-appropriate questions for Primary and Secondary students
-- **Two Game Levels** - Progressive difficulty with different question sets per level
-- **Countdown Timer** - 15 seconds for Primary, 10 seconds for Secondary
-- **Instant Feedback** - Explanations after each answer to reinforce learning
-- **Score Tracking** - Progress bar and score display throughout the game
-- **Mobile Responsive** - Works on desktop, tablet, and mobile devices
+An educational game that teaches students to distinguish between AI-powered technology and non-AI technology. Designed for Day of AI
+Australia targeting Primary (Years 3-6) and Secondary (Years 7-10) students.
 
 ## Tech Stack
 
@@ -54,7 +46,7 @@ src/
 ### Prerequisites
 
 - Node.js 18+
-- npm, yarn, pnpm, or bun
+- bun
 
 ### Installation
 
@@ -64,13 +56,13 @@ git clone <repository-url>
 cd ai-or-not
 
 # Install dependencies
-npm install
+bun install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+bun dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
@@ -78,7 +70,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ### Production Build
 
 ```bash
-npm run build
+bun run build
 ```
 
 Output is generated in the `dist/` directory.
@@ -86,7 +78,7 @@ Output is generated in the `dist/` directory.
 ### Preview Production Build
 
 ```bash
-npm run preview
+bun run preview
 ```
 
 ## Game Configuration
@@ -118,11 +110,11 @@ Each question object:
 }
 ```
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `name` | string | The question text displayed to students |
-| `isAI` | boolean | `true` if AI-powered, `false` if not |
-| `explanation` | string | Educational explanation shown after answering |
+| Field         | Type    | Description                                   |
+| ------------- | ------- | --------------------------------------------- |
+| `name`        | string  | The question text displayed to students       |
+| `isAI`        | boolean | `true` if AI-powered, `false` if not          |
+| `explanation` | string  | Educational explanation shown after answering |
 
 ### Timer Settings
 
@@ -142,12 +134,12 @@ Build the project and deploy the `dist/` directory to any static hosting service
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | TypeScript check + production build |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint with auto-fix |
+| Command           | Description                         |
+| ----------------- | ----------------------------------- |
+| `bun run dev`     | Start development server            |
+| `bun run build`   | TypeScript check + production build |
+| `bun run preview` | Preview production build locally    |
+| `bun run lint`    | Run ESLint with auto-fix            |
 
 ## License
 
