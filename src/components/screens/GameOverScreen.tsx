@@ -28,9 +28,9 @@ export function GameOverScreen({
   };
 
   const getEmoji = () => {
-    if (percentage === 100) return "\uD83C\uDF89";
-    if (percentage >= 75) return "\uD83C\uDF1F";
-    if (percentage >= 50) return "\uD83D\uDC4D";
+    if (percentage === 100) return "🎉";
+    if (percentage >= 75) return "🌟";
+    if (percentage >= 50) return "👍";
     return "";
   };
 
@@ -72,7 +72,7 @@ export function GameOverScreen({
                 onPress={onNextLevel}
                 className="text-lg md:text-2xl px-8 md:px-12 py-4 md:py-8"
               >
-                Next Level \u2192
+                Next Level →
               </GameButton>
             ) : (
               <GameButton

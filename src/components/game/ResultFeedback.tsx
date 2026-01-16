@@ -33,7 +33,7 @@ export function ResultFeedback({
             isCorrect ? "text-green" : "text-orange"
           }`}
         >
-          {isCorrect ? "Correct! \u2713" : "Not quite \u2717"}
+          {isCorrect ? "Correct! ✓" : "Not quite ✗"}
         </p>
         <p className="text-base md:text-xl mb-3 md:mb-4">
           {item.name} is{" "}
@@ -53,7 +53,7 @@ export function ResultFeedback({
         onPress={onNext}
         className="text-lg md:text-2xl px-8 md:px-12 py-4 md:py-8"
       >
-        Next \u2192
+        Next →
       </GameButton>
     </div>
   );
