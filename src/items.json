@@ -2,14 +2,14 @@
   "primary": {
     "level1": [
       {
-        "name": "📱 TikTok videos that change based on what you watch",
-        "isAI": true,
-        "explanation": "TikTok uses AI to learn what videos you like and recommends similar ones. It watches what you watch, like, and skip to figure out your preferences."
+        "name": "📚 A storybook you read at home",
+        "isAI": false,
+        "explanation": "A printed storybook is just paper with ink. It doesn't learn, change, or respond to you - the words stay the same every time you read it."
       },
       {
-        "name": "🤳 Snapchat filter that changes your face",
+        "name": "🤖 Robot vacuum cleaner moving by itself",
         "isAI": true,
-        "explanation": "Snapchat filters use AI to detect your face, find your eyes, nose, and mouth, then add effects that move with you in real-time."
+        "explanation": "Robot vacuums use AI to map your home, avoid obstacles, and figure out the best path to clean every spot without getting stuck."
       },
       {
         "name": "🔊 Voice on a smart speaker answering questions",
@@ -20,11 +20,6 @@
         "name": "🎮 A video game character that responds to your playing style",
         "isAI": true,
         "explanation": "Some video games use AI to make characters smarter. They learn your playing style and adapt to make the game more challenging or fun."
-      },
-      {
-        "name": "🤖 Robot vacuum cleaner moving by itself",
-        "isAI": true,
-        "explanation": "Robot vacuums use AI to map your home, avoid obstacles, and figure out the best path to clean every spot without getting stuck."
       },
       {
         "name": "📺 Automatic captions on YouTube videos",
@@ -40,11 +35,6 @@
         "name": "🌍 Translation app that listens and speaks in another language",
         "isAI": true,
         "explanation": "Translation apps use AI to understand speech in one language and convert it to another. They learn from millions of translated sentences."
-      },
-      {
-        "name": "📚 A storybook you read at home",
-        "isAI": false,
-        "explanation": "A printed storybook is just paper with ink. It doesn't learn, change, or respond to you - the words stay the same every time you read it."
       },
       {
         "name": "🚲 A bicycle you ride to school",
@@ -80,19 +70,19 @@
         "name": "🕰️ A clock with hands that tick",
         "isAI": false,
         "explanation": "An analog clock uses gears and springs (or a small motor) to move the hands. It tells time through mechanical movement, not intelligence."
+      },
+      {
+        "name": "📱 TikTok videos that change based on what you watch",
+        "isAI": true,
+        "explanation": "TikTok uses AI to learn what videos you like and recommends similar ones. It watches what you watch, like, and skip to figure out your preferences."
+      },
+      {
+        "name": "🤳 Snapchat filter that changes your face",
+        "isAI": true,
+        "explanation": "Snapchat filters use AI to detect your face, find your eyes, nose, and mouth, then add effects that move with you in real-time."
       }
     ],
     "level2": [
-      {
-        "name": "🗣️ Siri or Google Assistant",
-        "isAI": true,
-        "explanation": "It understands your voice, answers questions, and learns what you like."
-      },
-      {
-        "name": "▶️ YouTube Recommendations",
-        "isAI": true,
-        "explanation": "It watches what videos you like and suggests new ones it thinks you'll enjoy."
-      },
       {
         "name": "🚪 Automatic Doors",
         "isAI": false,
@@ -102,11 +92,6 @@
         "name": "🧮 A Calculator",
         "isAI": false,
         "explanation": "It only follows pre-programmed math rules. It can't learn to solve new kinds of problems."
-      },
-      {
-        "name": "🎬 Netflix 'For You' Row",
-        "isAI": true,
-        "explanation": "It learns from the shows you watch to guess what other shows you might want to see next."
       },
       {
         "name": "🍿 A Microwave",
@@ -132,21 +117,26 @@
         "name": "✏️ Spell Check",
         "isAI": true,
         "explanation": "It not only spots a wrong word but often understands the sentence to suggest the correct one."
+      },
+      {
+        "name": "🗣️ Siri or Google Assistant",
+        "isAI": true,
+        "explanation": "It understands your voice, answers questions, and learns what you like."
+      },
+      {
+        "name": "▶️ YouTube Recommendations",
+        "isAI": true,
+        "explanation": "It watches what videos you like and suggests new ones it thinks you'll enjoy."
+      },
+      {
+        "name": "🎬 Netflix 'For You' Row",
+        "isAI": true,
+        "explanation": "It learns from the shows you watch to guess what other shows you might want to see next."
       }
     ]
   },
   "secondary": {
     "level1": [
-      {
-        "name": "🎵 The app suggesting new songs after you listen to music",
-        "isAI": true,
-        "explanation": "Music apps like Spotify use AI to analyse your listening habits, find patterns in the songs you like, and recommend new music you're likely to enjoy."
-      },
-      {
-        "name": "📢 Online ads that seem to know what you like",
-        "isAI": true,
-        "explanation": "These ads use AI to track your browsing behaviour and predict what products you might want to buy, creating a personalised advertising experience."
-      },
       {
         "name": "🚁 A drone flying itself to take videos",
         "isAI": true,
@@ -216,14 +206,19 @@
         "name": "🚥 A traffic light controlled by timers, not sensors",
         "isAI": false,
         "explanation": "Timer-based traffic lights follow a fixed schedule regardless of actual traffic conditions. They don't sense, learn, or adapt to their environment."
+      },
+      {
+        "name": "🎵 The app suggesting new songs after you listen to music",
+        "isAI": true,
+        "explanation": "Music apps like Spotify use AI to analyse your listening habits, find patterns in the songs you like, and recommend new music you're likely to enjoy."
+      },
+      {
+        "name": "📢 Online ads that seem to know what you like",
+        "isAI": true,
+        "explanation": "These ads use AI to track your browsing behaviour and predict what products you might want to buy, creating a personalised advertising experience."
       }
     ],
     "level2": [
-      {
-        "name": "📱 TikTok 'For You' Page",
-        "isAI": true,
-        "explanation": "The algorithm learns your viewing habits with incredible detail to create a highly personalised and addictive feed."
-      },
       {
         "name": "🔐 Face ID to Unlock a Phone",
         "isAI": true,
@@ -245,11 +240,6 @@
         "explanation": "It analyses live data from many phones to predict traffic jams and suggest faster routes, constantly learning traffic patterns."
       },
       {
-        "name": "🎯 Personalised Ads",
-        "isAI": true,
-        "explanation": "An AI tracks your browsing history and online behaviour to predict what products you are most likely to buy."
-      },
-      {
         "name": "🚙 Basic Cruise Control",
         "isAI": false,
         "explanation": "It's an automated system that just maintains a speed you set. It doesn't sense other cars or conditions."
@@ -268,6 +258,16 @@
         "name": "🌡️ A Digital Thermostat",
         "isAI": false,
         "explanation": "It's a simple sensor and switch. It turns the heating or cooling on or off when the temperature goes past a set point."
+      },
+      {
+        "name": "📱 TikTok 'For You' Page",
+        "isAI": true,
+        "explanation": "The algorithm learns your viewing habits with incredible detail to create a highly personalised and addictive feed."
+      },
+      {
+        "name": "🎯 Personalised Ads",
+        "isAI": true,
+        "explanation": "An AI tracks your browsing history and online behaviour to predict what products you are most likely to buy."
       }
     ]
   }

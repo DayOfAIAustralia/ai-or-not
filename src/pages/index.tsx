@@ -2,7 +2,6 @@ import { useState, useCallback } from "react";
 
 import itemsData from "@/items.json";
 import { Item, YearLevel } from "@/types/game";
-import { shuffleArray } from "@/utils/shuffle";
 import { useGameTimer } from "@/hooks/useGameTimer";
 import { LandingScreen } from "@/components/screens/LandingScreen";
 import { LevelIntroScreen } from "@/components/screens/LevelIntroScreen";
@@ -43,7 +42,7 @@ export default function IndexPage() {
 
   const handleStartGame = () => {
     const questions = getLevelItems(1);
-    setItems(shuffleArray(questions));
+    setItems(questions);
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
@@ -70,7 +69,7 @@ export default function IndexPage() {
   };
 
   const handlePlayAgain = () => {
-    setItems(shuffleArray(getLevelItems(currentLevel)));
+    setItems(getLevelItems(currentLevel));
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
@@ -83,7 +82,7 @@ export default function IndexPage() {
   };
 
   const handleStartLevel2 = () => {
-    setItems(shuffleArray(getLevelItems(2)));
+    setItems(getLevelItems(2));
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
