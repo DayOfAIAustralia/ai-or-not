@@ -1,6 +1,11 @@
 import { useState, useCallback } from "react";
 
-import itemsData from "@/items.json";
+import primaryLevel1 from "@/questions/primary/level1.json";
+import primaryLevel2 from "@/questions/primary/level2.json";
+import primaryLevel3 from "@/questions/primary/level3.json";
+import secondaryLevel1 from "@/questions/secondary/level1.json";
+import secondaryLevel2 from "@/questions/secondary/level2.json";
+import secondaryLevel3 from "@/questions/secondary/level3.json";
 import { Item, YearLevel } from "@/types/game";
 import { useGameTimer } from "@/hooks/useGameTimer";
 import { LandingScreen } from "@/components/screens/LandingScreen";
@@ -35,9 +40,11 @@ export default function IndexPage() {
   });
 
   const getLevelItems = (level: number): Item[] => {
-    const questionSet =
-      yearLevel === "primary" ? itemsData.primary : itemsData.secondary;
-    return level === 1 ? questionSet.level1 : questionSet.level2;
+    const questions =
+      yearLevel === "primary"
+        ? [primaryLevel1, primaryLevel2, primaryLevel3]
+        : [secondaryLevel1, secondaryLevel2, secondaryLevel3];
+    return questions[level - 1] as Item[];
   };
 
   const handleStartGame = () => {
@@ -77,12 +84,13 @@ export default function IndexPage() {
   };
 
   const handleNextLevel = () => {
-    setCurrentLevel(2);
+    const nextLevel = currentLevel + 1;
+    setCurrentLevel(nextLevel);
     setGameState("levelIntro");
   };
 
-  const handleStartLevel2 = () => {
-    setItems(getLevelItems(2));
+  const handleStartNextLevel = () => {
+    setItems(getLevelItems(currentLevel));
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
@@ -110,7 +118,12 @@ export default function IndexPage() {
       );
 
     case "levelIntro":
-      return <LevelIntroScreen onStartLevel={handleStartLevel2} />;
+      return (
+        <LevelIntroScreen
+          level={currentLevel}
+          onStartLevel={handleStartNextLevel}
+        />
+      );
 
     case "gameOver":
       return (

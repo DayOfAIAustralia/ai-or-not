@@ -40,7 +40,7 @@ export function GameOverScreen({
       <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 pt-20 mt-8 md:pt-28 text-center bg-yellow">
         <div className="bg-white dark:bg-gray-900 rounded-2xl md:rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-3 md:border-4 border-gray-900 p-5 md:p-10 lg:p-16 max-w-2xl">
           <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-blue">
-            {currentLevel === 1 ? "Level 1 Complete!" : "Level 2 Complete!"}
+            Level {currentLevel} Complete!
           </h1>
 
           <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-8 mb-4 md:mb-8 border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]">
@@ -66,7 +66,7 @@ export function GameOverScreen({
               Play Again
             </GameButton>
 
-            {currentLevel === 1 ? (
+            {currentLevel < 3 ? (
               <GameButton
                 variant="secondary"
                 onPress={onNextLevel}

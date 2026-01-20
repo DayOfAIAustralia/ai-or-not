@@ -52,7 +52,7 @@ export function GameScreen({
             />
           )}
 
-          <QuestionCard question={currentItem.name} />
+          <QuestionCard question={currentItem.name} image={currentItem.image} />
 
           {!showResult ? (
             <AnswerButtons onAnswer={onAnswer} currentLevel={currentLevel} />

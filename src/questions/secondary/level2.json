@@ -1,0 +1,52 @@
+[
+  {
+    "name": "🔐 Face ID to Unlock a Phone",
+    "isAI": true,
+    "explanation": "It uses machine learning to create a unique map of your face and recognises it even with small changes."
+  },
+  {
+    "name": "🤖 ChatGPT",
+    "isAI": true,
+    "explanation": "A generative AI that understands context, answers complex questions, and creates original text based on patterns from a massive dataset."
+  },
+  {
+    "name": "📧 Email Spam Filter",
+    "isAI": true,
+    "explanation": "It learns to identify the features of junk mail (keywords, sender, links) and automatically sorts it for you."
+  },
+  {
+    "name": "🗺️ Google Maps Real-Time Traffic",
+    "isAI": true,
+    "explanation": "It analyses live data from many phones to predict traffic jams and suggest faster routes, constantly learning traffic patterns."
+  },
+  {
+    "name": "🚙 Basic Cruise Control",
+    "isAI": false,
+    "explanation": "It's an automated system that just maintains a speed you set. It doesn't sense other cars or conditions."
+  },
+  {
+    "name": "🏧 An ATM",
+    "isAI": false,
+    "explanation": "It follows a secure, pre-programmed set of steps. It cannot make decisions outside of its programming."
+  },
+  {
+    "name": "📲 A QR Code Scanner",
+    "isAI": false,
+    "explanation": "It's a simple decoder. It translates a visual pattern into data (like a website link) without any learning or inference."
+  },
+  {
+    "name": "🌡️ A Digital Thermostat",
+    "isAI": false,
+    "explanation": "It's a simple sensor and switch. It turns the heating or cooling on or off when the temperature goes past a set point."
+  },
+  {
+    "name": "📱 TikTok 'For You' Page",
+    "isAI": true,
+    "explanation": "The algorithm learns your viewing habits with incredible detail to create a highly personalised and addictive feed."
+  },
+  {
+    "name": "🎯 Personalised Ads",
+    "isAI": true,
+    "explanation": "An AI tracks your browsing history and online behaviour to predict what products you are most likely to buy."
+  }
+]

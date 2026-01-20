@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Placeholder explanation",
+    "image": "/images/level3/secondary-1.jpg"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": false,
+    "explanation": "Placeholder explanation",
+    "image": "/images/level3/secondary-2.jpg"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Placeholder explanation",
+    "image": "/images/level3/secondary-3.jpg"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": false,
+    "explanation": "Placeholder explanation",
+    "image": "/images/level3/secondary-4.jpg"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Placeholder explanation",
+    "image": "/images/level3/secondary-5.jpg"
+  }
+]
