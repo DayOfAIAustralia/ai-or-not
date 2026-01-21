@@ -2,31 +2,31 @@
   {
     "name": "Is this image AI-generated?",
     "isAI": true,
-    "explanation": "Placeholder explanation",
-    "image": "/images/level3/secondary-1.jpg"
-  },
-  {
-    "name": "Is this image AI-generated?",
-    "isAI": false,
-    "explanation": "Placeholder explanation",
-    "image": "/images/level3/secondary-2.jpg"
+    "explanation": "Are there any inconsistencies in the background, human features?",
+    "image": "/images/level3/secondary-1.png"
   },
   {
     "name": "Is this image AI-generated?",
     "isAI": true,
-    "explanation": "Placeholder explanation",
-    "image": "/images/level3/secondary-3.jpg"
+    "explanation": "Look at their human features e.g. hands, eyes, skin",
+    "image": "/images/level3/secondary-2.png"
   },
   {
     "name": "Is this image AI-generated?",
     "isAI": false,
-    "explanation": "Placeholder explanation",
-    "image": "/images/level3/secondary-4.jpg"
+    "explanation": "",
+    "image": "/images/level3/secondary-3.png"
   },
   {
     "name": "Is this image AI-generated?",
     "isAI": true,
-    "explanation": "Placeholder explanation",
-    "image": "/images/level3/secondary-5.jpg"
+    "explanation": "Check their facial features!",
+    "image": "/images/level3/secondary-4.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Look at their hands and facial features!",
+    "image": "/images/level3/secondary-5.png"
   }
 ]

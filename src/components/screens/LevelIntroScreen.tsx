@@ -6,7 +6,10 @@ interface LevelIntroScreenProps {
   onStartLevel: () => void;
 }
 
-export function LevelIntroScreen({ level, onStartLevel }: LevelIntroScreenProps) {
+export function LevelIntroScreen({
+  level,
+  onStartLevel,
+}: LevelIntroScreenProps) {
   const getLevelTitle = () => {
     if (level === 2) return "AI-Powered?";
     if (level === 3) return "Real or AI?";
@@ -17,9 +20,9 @@ export function LevelIntroScreen({ level, onStartLevel }: LevelIntroScreenProps)
     if (level === 2) {
       return (
         <>
-          Great job on Level 1! Now let's see if you can tell which things
-          are <span className="font-bold text-green">AI-Powered</span> and
-          which are not!
+          Great job on Level 1! Now let's see if you can tell which things are{" "}
+          <span className="font-bold text-green">AI-Powered</span> and which are
+          not!
         </>
       );
     }
@@ -29,6 +32,7 @@ export function LevelIntroScreen({ level, onStartLevel }: LevelIntroScreenProps)
           Final challenge! Look at each image and decide if it was
           <span className="font-bold text-green"> created by AI</span> or
           <span className="font-bold text-pink"> taken by a real camera</span>!
+          You can click on the image to expand it!
         </>
       );
     }
@@ -39,19 +43,19 @@ export function LevelIntroScreen({ level, onStartLevel }: LevelIntroScreenProps)
     if (level === 3) {
       return (
         <>
-          Tap <span className="font-bold text-green">"AI-Generated"</span>{" "}
-          if you think the image was made by AI, or{" "}
-          <span className="font-bold text-pink">"Real Photo"</span>{" "}
-          if it's a real photograph.
+          Tap <span className="font-bold text-green">"AI-Generated"</span> if
+          you think the image was made by AI, or{" "}
+          <span className="font-bold text-pink">"Real Photo"</span> if it's a
+          real photograph.
         </>
       );
     }
     return (
       <>
-        Tap <span className="font-bold text-green">"AI-Powered"</span>{" "}
-        if you think the item uses AI, or{" "}
-        <span className="font-bold text-pink">"Not AI-Powered"</span>{" "}
-        if it doesn't.
+        Tap <span className="font-bold text-green">"AI-Powered"</span> if you
+        think the item uses AI, or{" "}
+        <span className="font-bold text-pink">"Not AI-Powered"</span> if it
+        doesn't.
       </>
     );
   };

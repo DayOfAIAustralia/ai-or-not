@@ -48,7 +48,7 @@ export function ResultFeedback({
             {getAnswerLabel()}
           </span>
         </p>
-        <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 text-left">
+        <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
           {item.explanation}
         </p>
       </div>
