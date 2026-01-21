@@ -10,7 +10,7 @@ export function QuestionCard({ question, image }: QuestionCardProps) {
         <img
           src={image}
           alt="Question image"
-          className="w-full max-h-64 md:max-h-80 object-contain rounded-lg mb-4 border-2 border-gray-900"
+          className="w-full max-h-64 md:max-h-80 object-contain mb-4"
         />
       )}
       <h1 className="text-lg md:text-2xl lg:text-3xl font-bold">{question}</h1>

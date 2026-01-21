@@ -18,7 +18,12 @@ export function ResultFeedback({
     if (currentLevel === 1) {
       return item.isAI ? "AI" : "Not AI";
     }
-    return item.isAI ? "AI-Powered" : "Not AI-Powered";
+
+    if (currentLevel === 2) {
+      return item.isAI ? "AI-Powered" : "Not AI-Powered";
+    }
+
+    return item.isAI ? "AI-Generated" : "Real";
   };
 
   return (
@@ -36,7 +41,7 @@ export function ResultFeedback({
           {isCorrect ? "Correct! ✓" : "Not quite ✗"}
         </p>
         <p className="text-base md:text-xl mb-3 md:mb-4">
-          {item.name} is{" "}
+          {currentLevel === 3 ? "This image is " : item.name + "is "}
           <span
             className={`font-bold ${item.isAI ? "text-green" : "text-pink"}`}
           >
