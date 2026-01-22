@@ -21,6 +21,9 @@ export default {
         yellow: "#FDC300",
         orange: "#FE7445",
       },
+      animation: {
+        slideDown: 'slideDown 0.3s ease-out',
+      },
     },
   },
   darkMode: "class",

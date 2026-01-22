@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Take a look if there's anything strange with the background",
+    "image": "/images/level3/primary-1.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": false,
+    "explanation": "This was taken with a real camera!",
+    "image": "/images/level3/primary-2.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Do the human features (e.g. fingers, faces) look off? Do the background details make sense?",
+    "image": "/images/level3/primary-3.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Look at the strange human features!",
+    "image": "/images/level3/primary-4.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": false,
+    "explanation": "",
+    "image": "/images/level3/primary-5.png"
+  }
+]

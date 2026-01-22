@@ -1,0 +1,52 @@
+[
+  {
+    "name": "🚪 Automatic Doors",
+    "isAI": false,
+    "explanation": "It just uses a simple sensor to see when something is in front of it. It doesn't learn or think."
+  },
+  {
+    "name": "🧮 A Calculator",
+    "isAI": false,
+    "explanation": "It only follows pre-programmed math rules. It can't learn to solve new kinds of problems."
+  },
+  {
+    "name": "🍿 A Microwave",
+    "isAI": false,
+    "explanation": "You tell it exactly how long to cook for. It follows your instructions and doesn't make its own decisions."
+  },
+  {
+    "name": "🎨 AI Art Generator",
+    "isAI": true,
+    "explanation": "It learned from millions of pictures to create a brand new image based on your text description."
+  },
+  {
+    "name": "🚦 Traffic Lights",
+    "isAI": false,
+    "explanation": "Most traffic lights just follow a simple timer pattern. They don't watch the traffic to change their timing."
+  },
+  {
+    "name": "🚗 A Remote Control Car",
+    "isAI": false,
+    "explanation": "It only does what you tell it to do with the controller. It doesn't drive by itself."
+  },
+  {
+    "name": "✏️ Spell Check",
+    "isAI": true,
+    "explanation": "It not only spots a wrong word but often understands the sentence to suggest the correct one."
+  },
+  {
+    "name": "🗣️ Siri or Google Assistant",
+    "isAI": true,
+    "explanation": "It understands your voice, answers questions, and learns what you like."
+  },
+  {
+    "name": "▶️ YouTube Recommendations",
+    "isAI": true,
+    "explanation": "It watches what videos you like and suggests new ones it thinks you'll enjoy."
+  },
+  {
+    "name": "🎬 Netflix 'For You' Row",
+    "isAI": true,
+    "explanation": "It learns from the shows you watch to guess what other shows you might want to see next."
+  }
+]
