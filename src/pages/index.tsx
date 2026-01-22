@@ -18,7 +18,7 @@ type GameState = "landing" | "levelIntro" | "playing" | "gameOver";
 export default function IndexPage() {
   const [yearLevel, setYearLevel] = useState<YearLevel>(null);
   const [gameState, setGameState] = useState<GameState>("landing");
-  const [currentLevel, setCurrentLevel] = useState(3);
+  const [currentLevel, setCurrentLevel] = useState(1);
   const [items, setItems] = useState<Item[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -49,7 +49,7 @@ export default function IndexPage() {
   };
 
   const handleStartGame = () => {
-    const questions = getLevelItems(3);
+    const questions = getLevelItems(1);
     setItems(questions);
     setCurrentIndex(0);
     setScore(0);

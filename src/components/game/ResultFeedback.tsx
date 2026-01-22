@@ -41,7 +41,7 @@ export function ResultFeedback({
           {isCorrect ? "Correct! ✓" : "Not quite ✗"}
         </p>
         <p className="text-base md:text-xl mb-3 md:mb-4">
-          {currentLevel === 3 ? "This image is " : item.name + "is "}
+          {currentLevel === 3 ? "This image is " : item.name + " is "}
           <span
             className={`font-bold ${item.isAI ? "text-green" : "text-pink"}`}
           >
