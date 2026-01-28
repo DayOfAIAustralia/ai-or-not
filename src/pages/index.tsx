@@ -26,7 +26,7 @@ export default function IndexPage() {
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false);
 
   const currentItem = items[currentIndex];
-  const timerDuration = yearLevel === "primary" ? 15 : 10;
+  const timerDuration = yearLevel === "primary" ? 30 : 20;
 
   const handleTimeUp = useCallback(() => {
     setLastAnswerCorrect(false);
