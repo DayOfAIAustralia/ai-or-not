@@ -1,0 +1,52 @@
+[
+  {
+    "name": "🔐 Face ID to Unlock a Phone",
+    "isAI": true,
+    "explanation": "Face ID demonstrates Big Idea 1: Perception (using cameras to capture facial features) and Big Idea 3: Learning (machine learning creates a unique face map that adapts to small changes over time)."
+  },
+  {
+    "name": "🤖 ChatGPT",
+    "isAI": true,
+    "explanation": "ChatGPT exemplifies Big Idea 3: Learning (trained on massive text datasets), Big Idea 4: Natural Interaction (understanding context and generating human-like responses), and raises Big Idea 5: Societal Impact questions about AI in education and work."
+  },
+  {
+    "name": "📧 Email Spam Filter",
+    "isAI": true,
+    "explanation": "Spam filters use Big Idea 3: Learning (identifying patterns in junk mail like suspicious keywords, senders, and links) and Big Idea 2: Representation & Reasoning (classifying emails based on learned features)."
+  },
+  {
+    "name": "🗺️ Google Maps Real-Time Traffic",
+    "isAI": true,
+    "explanation": "Google Maps uses Big Idea 1: Perception (gathering location data from phones) and Big Idea 3: Learning (analysing patterns to predict traffic jams and suggest optimal routes)."
+  },
+  {
+    "name": "🚙 Basic Cruise Control",
+    "isAI": false,
+    "explanation": "Basic cruise control is an automated system but not AI - it simply maintains a set speed. It lacks Big Idea 1: Perception (can't sense other cars) and Big Idea 3: Learning (doesn't adapt to conditions)."
+  },
+  {
+    "name": "🏧 An ATM",
+    "isAI": false,
+    "explanation": "An ATM follows a secure, pre-programmed sequence of steps. It lacks Big Idea 2: Representation & Reasoning (can't make decisions outside its programming) and Big Idea 3: Learning (doesn't improve over time)."
+  },
+  {
+    "name": "📲 A QR Code Scanner",
+    "isAI": false,
+    "explanation": "A QR scanner is a simple decoder that translates visual patterns into data. While it uses a camera, this isn't Big Idea 1: Perception in the AI sense - no learning, inference, or understanding occurs."
+  },
+  {
+    "name": "🌡️ A Digital Thermostat",
+    "isAI": false,
+    "explanation": "A basic thermostat is a simple sensor and switch that turns heating/cooling on or off at a set temperature. It lacks Big Idea 3: Learning (can't optimise based on your habits) unlike smart thermostats."
+  },
+  {
+    "name": "📱 TikTok 'For You' Page",
+    "isAI": true,
+    "explanation": "TikTok's algorithm demonstrates Big Idea 3: Learning (tracking viewing habits with extreme detail to personalise content). This raises significant Big Idea 5: Societal Impact concerns about attention, mental health, and content bubbles."
+  },
+  {
+    "name": "🎯 Personalised Ads",
+    "isAI": true,
+    "explanation": "Targeted advertising uses Big Idea 3: Learning (building profiles from browsing history to predict purchasing behaviour). This is a key example of Big Idea 5: Societal Impact - raising privacy and manipulation concerns."
+  }
+]

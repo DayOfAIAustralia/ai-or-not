@@ -1,0 +1,52 @@
+[
+  {
+    "name": "🚪 Automatic Doors",
+    "isAI": false,
+    "explanation": "Automatic doors use a simple sensor to detect when something is in front. This isn't real Perception because it doesn't understand what it sees - it just knows 'something is there'."
+  },
+  {
+    "name": "🧮 A Calculator",
+    "isAI": false,
+    "explanation": "A calculator follows pre-programmed math rules. It doesn't have Learning - it can't figure out new types of problems or get better over time."
+  },
+  {
+    "name": "🍿 A Microwave",
+    "isAI": false,
+    "explanation": "A microwave just follows your instructions - heat for this long. No Perception to see your food, no Learning to know how you like it cooked."
+  },
+  {
+    "name": "🎨 AI Art Generator",
+    "isAI": true,
+    "explanation": "This is all about Learning! The AI learned from millions of pictures to understand what things look like. Now it can create brand new images from your words."
+  },
+  {
+    "name": "🚦 Traffic Lights",
+    "isAI": false,
+    "explanation": "Most traffic lights just follow a timer pattern. They don't have Perception to watch the traffic or Learning to change their timing based on how busy it is."
+  },
+  {
+    "name": "🚗 A Remote Control Car",
+    "isAI": false,
+    "explanation": "An RC car only does exactly what you tell it with the controller. No Perception to see obstacles, no Learning, no Representation & Reasoning to drive itself."
+  },
+  {
+    "name": "✏️ Spell Check",
+    "isAI": true,
+    "explanation": "Modern spell check uses Learning to understand sentences, not just spot wrong words. It uses Representation & Reasoning to figure out what word you probably meant."
+  },
+  {
+    "name": "🗣️ Siri or Google Assistant",
+    "isAI": true,
+    "explanation": "Assistants use Perception to hear your voice, Natural Interaction to understand and talk back to you, and Learning to get better at helping you!"
+  },
+  {
+    "name": "▶️ YouTube Recommendations",
+    "isAI": true,
+    "explanation": "YouTube uses Learning to figure out what videos you like. This also has Societal Impact - it decides what millions of people watch every day!"
+  },
+  {
+    "name": "🎬 Netflix 'For You' Row",
+    "isAI": true,
+    "explanation": "Netflix uses Learning to watch what shows you like and guess what you might want to see next. It learned patterns from millions of viewers!"
+  }
+]

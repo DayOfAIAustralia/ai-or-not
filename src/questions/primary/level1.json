@@ -5,7 +5,7 @@
     "explanation": "A printed storybook is just paper with ink. It doesn't learn, change, or respond to you - the words stay the same every time you read it."
   },
   {
-    "name": "🤖 Robot vacuum cleaner moving by itself",
+    "name": "🤖 Robot vacuum cleaner that moves by itself and senses objects",
     "isAI": true,
     "explanation": "Robot vacuums use AI to map your home, avoid obstacles, and figure out the best path to clean every spot without getting stuck."
   },
@@ -68,15 +68,5 @@
     "name": "🕰️ A clock with hands that tick",
     "isAI": false,
     "explanation": "An analog clock uses gears and springs (or a small motor) to move the hands. It tells time through mechanical movement, not intelligence."
-  },
-  {
-    "name": "📱 TikTok videos that change based on what you watch",
-    "isAI": true,
-    "explanation": "TikTok uses AI to learn what videos you like and recommends similar ones. It watches what you watch, like, and skip to figure out your preferences."
-  },
-  {
-    "name": "🤳 Snapchat filter that changes your face",
-    "isAI": true,
-    "explanation": "Snapchat filters use AI to detect your face, find your eyes, nose, and mouth, then add effects that move with you in real-time."
   }
 ]

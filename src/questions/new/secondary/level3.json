@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "This image was created using Big Idea 3: Learning - generative AI trained on millions of images. Look for inconsistencies in backgrounds or physics that reveal the AI learned patterns without true understanding.",
+    "image": "/images/level3/secondary-1.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "AI-generated via Big Idea 3: Learning. Examine hands, eyes, and skin textures - these often reveal artifacts because the model learned statistical patterns rather than human anatomy. This connects to Big Idea 5: Societal Impact around synthetic media.",
+    "image": "/images/level3/secondary-2.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": false,
+    "explanation": "This is a real photograph captured by a camera. Unlike AI images created through Big Idea 3: Learning, real photos come from actual light hitting a sensor - they're records of reality, not statistical pattern generation.",
+    "image": "/images/level3/secondary-3.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Created by generative AI using Big Idea 3: Learning. Facial features often betray AI generation - the model learned correlations between features but lacks Big Idea 2: Representation & Reasoning about human anatomy.",
+    "image": "/images/level3/secondary-4.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "This demonstrates Big Idea 3: Learning in image generation. Hands and facial details are telltale signs - AI models struggle with these because they learned patterns without understanding 3D structure. Consider Big Idea 5: Societal Impact of increasingly realistic synthetic images.",
+    "image": "/images/level3/secondary-5.png"
+  }
+]

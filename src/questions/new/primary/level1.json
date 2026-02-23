@@ -1,0 +1,72 @@
+[
+  {
+    "name": "📚 A storybook you read at home",
+    "isAI": false,
+    "explanation": "A storybook is just paper and ink. It can't see you (Perception), learn anything (Learning), or talk to you (Natural Interaction) - the words stay the same every time!"
+  },
+  {
+    "name": "🤖 Robot vacuum cleaner moving by itself",
+    "isAI": true,
+    "explanation": "Robot vacuums use Perception to see obstacles with sensors, and Learning to remember your home's layout. That's how they find the best path without getting stuck!"
+  },
+  {
+    "name": "🔊 Voice on a smart speaker answering questions",
+    "isAI": true,
+    "explanation": "Smart speakers use Perception to hear your voice, Natural Interaction to understand what you're asking, and Learning to get better at answering your questions."
+  },
+  {
+    "name": "🎮 A video game character that responds to your playing style",
+    "isAI": true,
+    "explanation": "This uses Learning - the game learns how you play and gets smarter! It also uses Representation & Reasoning to figure out what moves to make against you."
+  },
+  {
+    "name": "📺 Automatic captions on YouTube videos",
+    "isAI": true,
+    "explanation": "YouTube uses Perception to listen to videos and Learning to turn speech into text. It learned from millions of examples of people talking!"
+  },
+  {
+    "name": "📲 Phone unlocking with your face",
+    "isAI": true,
+    "explanation": "Face unlock uses Perception to see your face with a camera, and Learning to recognise that it's really you - not someone else or a photo!"
+  },
+  {
+    "name": "🌍 Translation app that listens and speaks in another language",
+    "isAI": true,
+    "explanation": "Translation apps use Perception to hear you speak, Learning to understand languages, and Natural Interaction to talk back to you in another language!"
+  },
+  {
+    "name": "🚲 A bicycle you ride to school",
+    "isAI": false,
+    "explanation": "A bicycle is powered by you! It uses gears and wheels - no Perception, no Learning, no thinking at all. You're the smart one riding it!"
+  },
+  {
+    "name": "🍞 A toaster that browns bread",
+    "isAI": false,
+    "explanation": "A toaster just heats up for the time you set. It can't see (Perception) how brown your toast is or learn (Learning) how you like it."
+  },
+  {
+    "name": "📻 A radio that plays music when you turn it on",
+    "isAI": false,
+    "explanation": "A basic radio just receives signals and plays them as sound. It doesn't have Perception to know what you like or Learning to pick better songs for you."
+  },
+  {
+    "name": "📺 A regular TV remote",
+    "isAI": false,
+    "explanation": "A TV remote just sends simple signals when you press buttons. No Perception, no Learning, no Natural Interaction - it only does exactly what you tell it!"
+  },
+  {
+    "name": "📷 A printed photo album",
+    "isAI": false,
+    "explanation": "A photo album is just printed pictures in a book. Unlike phone apps that use Perception and Learning to recognise faces, it can't organise anything by itself."
+  },
+  {
+    "name": "🔦 A flashlight that turns on with a switch",
+    "isAI": false,
+    "explanation": "A flashlight is a simple circuit - flip the switch and light comes on. No Perception, no Learning, no thinking involved!"
+  },
+  {
+    "name": "🕰️ A clock with hands that tick",
+    "isAI": false,
+    "explanation": "An analog clock uses gears to move the hands. It tells time through mechanics, not through Perception or Learning like a smartwatch would."
+  }
+]

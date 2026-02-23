@@ -1,0 +1,82 @@
+[
+  {
+    "name": "🚁 A drone flying itself to take videos",
+    "isAI": true,
+    "explanation": "Autonomous drones demonstrate Big Idea 1: Perception (using cameras and sensors to see obstacles) and Big Idea 2: Representation & Reasoning (building a map of their environment and planning paths in real-time)."
+  },
+  {
+    "name": "🏥 The software that helps doctors spot diseases in scans",
+    "isAI": true,
+    "explanation": "Medical AI uses Big Idea 1: Perception (analysing visual data from scans) and Big Idea 3: Learning (trained on thousands of images to recognise patterns of diseases like cancer or fractures)."
+  },
+  {
+    "name": "💬 Chatbot that answers your questions online",
+    "isAI": true,
+    "explanation": "Chatbots demonstrate Big Idea 4: Natural Interaction (understanding and generating human language) and Big Idea 3: Learning (trained on millions of conversations to generate relevant responses)."
+  },
+  {
+    "name": "🎮 A video game that changes difficulty based on your skill",
+    "isAI": true,
+    "explanation": "Adaptive difficulty uses Big Idea 3: Learning (monitoring your performance patterns) and Big Idea 2: Representation & Reasoning (maintaining a model of your skill level to adjust challenges dynamically)."
+  },
+  {
+    "name": "✍️ An app that writes stories or poems for you",
+    "isAI": true,
+    "explanation": "Generative AI writers use Big Idea 3: Learning (trained on vast amounts of text to understand language patterns) and Big Idea 4: Natural Interaction (producing human-like creative writing)."
+  },
+  {
+    "name": "🎭 Deepfake videos that swap faces realistically",
+    "isAI": true,
+    "explanation": "Deepfakes use Big Idea 1: Perception (analysing facial features), Big Idea 3: Learning (trained on video data), and demonstrate Big Idea 5: Societal Impact (potential for misinformation and privacy concerns)."
+  },
+  {
+    "name": "📰 A printed newspaper article",
+    "isAI": false,
+    "explanation": "A newspaper is static printed text. It lacks Big Idea 1: Perception (can't sense the reader), Big Idea 3: Learning (can't adapt), and Big Idea 4: Natural Interaction (can't respond to you)."
+  },
+  {
+    "name": "🥫 A hand-powered can opener",
+    "isAI": false,
+    "explanation": "A can opener is a simple mechanical tool using leverage and a cutting wheel. None of the 5 Big Ideas apply - no perception, no learning, no reasoning, just human-powered mechanics."
+  },
+  {
+    "name": "🔢 A regular calculator that only adds and subtracts",
+    "isAI": false,
+    "explanation": "A basic calculator follows fixed mathematical rules - it lacks Big Idea 3: Learning (cannot learn new operations) and Big Idea 2: Representation & Reasoning (no adaptive problem-solving)."
+  },
+  {
+    "name": "⌚ A mechanical wristwatch",
+    "isAI": false,
+    "explanation": "A mechanical watch uses springs, gears, and an escapement mechanism. It's pure precision engineering with no computational intelligence - none of the 5 Big Ideas apply."
+  },
+  {
+    "name": "🚴 A bike that you pedal to move",
+    "isAI": false,
+    "explanation": "A bicycle converts pedalling energy into motion through gears and chains. It's entirely human-powered - no Big Idea 1: Perception, no Big Idea 3: Learning, no AI at all."
+  },
+  {
+    "name": "📸 A regular camera that uses film",
+    "isAI": false,
+    "explanation": "A film camera uses optics and chemical processes to capture images. Unlike digital cameras with AI features, it has no Big Idea 1: Perception (in the AI sense) or Big Idea 3: Learning capabilities."
+  },
+  {
+    "name": "💡 A light bulb you turn on with a switch",
+    "isAI": false,
+    "explanation": "A light bulb is a simple electrical circuit. When you flip the switch, electricity flows through to produce light - no Big Ideas apply, just basic physics."
+  },
+  {
+    "name": "🚥 A traffic light controlled by timers, not sensors",
+    "isAI": false,
+    "explanation": "Timer-based traffic lights follow a fixed schedule regardless of conditions. They lack Big Idea 1: Perception (no sensing) and Big Idea 3: Learning (no adaptation to traffic patterns)."
+  },
+  {
+    "name": "🎵 The app suggesting new songs after you listen to music",
+    "isAI": true,
+    "explanation": "Music recommendation uses Big Idea 3: Learning (analysing your listening habits and finding patterns). This also demonstrates Big Idea 5: Societal Impact (influencing what music becomes popular)."
+  },
+  {
+    "name": "📢 Online ads that seem to know what you like",
+    "isAI": true,
+    "explanation": "Targeted advertising uses Big Idea 3: Learning (tracking behaviour to predict preferences). This raises Big Idea 5: Societal Impact concerns about privacy and manipulation."
+  }
+]

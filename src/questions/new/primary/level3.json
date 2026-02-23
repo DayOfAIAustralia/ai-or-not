@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Yes! An AI used Learning to create this image. Look for strange things in the background - AI sometimes makes mistakes because it learned patterns, not real understanding!",
+    "image": "/images/level3/primary-1.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": false,
+    "explanation": "This is a real photo taken with a camera! A person used Perception (their eyes) to frame the shot. No Learning algorithm made this one.",
+    "image": "/images/level3/primary-2.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "This was made by AI using Learning! Look at the fingers, faces, or background details - AI learned from pictures but sometimes gets human features wrong.",
+    "image": "/images/level3/primary-3.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": true,
+    "explanation": "Yes, AI made this! The strange human features show that while AI has powerful Learning, it doesn't truly understand what people look like. This is about Societal Impact too - AI images can trick us!",
+    "image": "/images/level3/primary-4.png"
+  },
+  {
+    "name": "Is this image AI-generated?",
+    "isAI": false,
+    "explanation": "This is a real photo! It was captured by a camera, not created by AI Learning. Real photos come from the real world, not from patterns an AI learned.",
+    "image": "/images/level3/primary-5.png"
+  }
+]
