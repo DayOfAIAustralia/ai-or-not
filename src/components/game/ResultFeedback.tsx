@@ -29,18 +29,18 @@ export function ResultFeedback({
   return (
     <div className="space-y-4 md:space-y-6">
       <div
-        className={`rounded-xl md:rounded-2xl p-4 md:p-8 border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] ${
+        className={`rounded-xl md:rounded-2xl p-4 md:p-6 border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] ${
           isCorrect ? "bg-green/20" : "bg-orange/20"
         }`}
       >
         <p
-          className={`text-2xl md:text-4xl font-bold mb-2 md:mb-3 ${
+          className={`text-2xl md:text-3xl font-bold mb-2 md:mb-3 ${
             isCorrect ? "text-green" : "text-orange"
           }`}
         >
           {isCorrect ? "Correct! ✓" : "Not quite ✗"}
         </p>
-        <p className="text-base md:text-xl mb-3 md:mb-4">
+        <p className="text-base md:text-lg mb-3 md:mb-4">
           {currentLevel === 3 ? "This image is " : item.name + " is "}
           <span
             className={`font-bold ${item.isAI ? "text-green" : "text-pink"}`}
@@ -56,7 +56,7 @@ export function ResultFeedback({
       <GameButton
         variant="primary"
         onPress={onNext}
-        className="text-lg md:text-2xl px-8 md:px-12 py-4 md:py-8"
+        className="text-lg md:text-xl px-8 md:px-10 py-4 md:py-6"
       >
         Next →
       </GameButton>

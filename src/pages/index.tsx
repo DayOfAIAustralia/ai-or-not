@@ -8,6 +8,7 @@ import secondaryLevel2 from "@/questions/secondary/level2.json";
 import secondaryLevel3 from "@/questions/secondary/level3.json";
 import { Item, YearLevel } from "@/types/game";
 import { useGameTimer } from "@/hooks/useGameTimer";
+import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { LandingScreen } from "@/components/screens/LandingScreen";
 import { LevelIntroScreen } from "@/components/screens/LevelIntroScreen";
 import { GameOverScreen } from "@/components/screens/GameOverScreen";
@@ -25,17 +26,30 @@ export default function IndexPage() {
   const [showResult, setShowResult] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false);
 
+  const { play } = useSoundEffects();
+
   const currentItem = items[currentIndex];
   const timerDuration = yearLevel === "primary" ? 30 : 20;
 
   const handleTimeUp = useCallback(() => {
+    play("timeUp");
     setLastAnswerCorrect(false);
     setShowResult(true);
-  }, []);
+  }, [play]);
+
+  const handleTick = useCallback(
+    (timeLeft: number) => {
+      if (timeLeft <= 3 && timeLeft > 0) {
+        play("tick");
+      }
+    },
+    [play],
+  );
 
   const { timeLeft } = useGameTimer({
     duration: timerDuration,
     onTimeUp: handleTimeUp,
+    onTick: handleTick,
     isActive:
       gameState === "playing" && !showResult && currentIndex < items.length,
   });
@@ -49,6 +63,7 @@ export default function IndexPage() {
   };
 
   const handleStartGame = () => {
+    play("levelStart");
     const questions = getLevelItems(1);
     setItems(questions);
     setCurrentIndex(0);
@@ -61,7 +76,10 @@ export default function IndexPage() {
     const correct = answeredAI === currentItem.isAI;
     setLastAnswerCorrect(correct);
     if (correct) {
+      play("correct");
       setScore((s) => s + 1);
+    } else {
+      play("wrong");
     }
     setShowResult(true);
   };
@@ -77,6 +95,7 @@ export default function IndexPage() {
   };
 
   const handlePlayAgain = () => {
+    play("levelStart");
     setItems(getLevelItems(currentLevel));
     setCurrentIndex(0);
     setScore(0);
@@ -91,6 +110,7 @@ export default function IndexPage() {
   };
 
   const handleStartNextLevel = () => {
+    play("levelStart");
     setItems(getLevelItems(currentLevel));
     setCurrentIndex(0);
     setScore(0);

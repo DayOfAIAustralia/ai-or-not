@@ -64,15 +64,15 @@ export function LevelIntroScreen({
     <>
       <Navbar />
       <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 pt-16 md:pt-20 text-center bg-yellow">
-        <div className="bg-white dark:bg-gray-900 rounded-2xl md:rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-3 md:border-4 border-gray-900 p-5 md:p-10 lg:p-16 max-w-2xl">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl md:rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-3 md:border-4 border-gray-900 p-5 md:p-8 lg:p-10 max-w-2xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
             <span className="text-blue">Level {level}</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-pink">
+          <h2 className="text-2xl md:text-3xl lg:text-3xl font-bold mb-4 md:mb-6 text-pink">
             {getLevelTitle()}
           </h2>
 
-          <div className="space-y-3 md:space-y-4 my-4 md:my-8 text-base md:text-xl">
+          <div className="space-y-3 md:space-y-4 my-4 md:my-6 text-base md:text-lg">
             <p>{getLevelDescription()}</p>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-3 md:p-4 text-sm md:text-lg border-2 border-gray-900">
               <p className="text-gray-600 dark:text-gray-400">
@@ -84,7 +84,7 @@ export function LevelIntroScreen({
           <GameButton
             variant="primary"
             onPress={onStartLevel}
-            className="text-lg md:text-2xl px-8 md:px-14 py-4 md:py-8"
+            className="text-lg md:text-xl px-8 md:px-10 py-4 md:py-6"
           >
             Start Level {level}!
           </GameButton>

@@ -1,15 +1,5 @@
 [
   {
-    "name": "🚁 A drone flying itself to take videos",
-    "isAI": true,
-    "explanation": "Autonomous drones use AI for obstacle avoidance, path planning, and tracking subjects. They make real-time decisions about flight without human control."
-  },
-  {
-    "name": "🏥 The software that helps doctors spot diseases in scans",
-    "isAI": true,
-    "explanation": "Medical AI analyses thousands of images to learn patterns of diseases, helping doctors identify conditions like cancer or fractures more accurately."
-  },
-  {
     "name": "💬 Chatbot that answers your questions online",
     "isAI": true,
     "explanation": "Modern chatbots use natural language processing AI to understand your questions and generate relevant responses, learning from millions of conversations."
@@ -18,11 +8,6 @@
     "name": "🎮 A video game that changes difficulty based on your skill",
     "isAI": true,
     "explanation": "Adaptive difficulty systems use AI to monitor your performance and dynamically adjust the game's challenge level to keep you engaged."
-  },
-  {
-    "name": "✍️ An app that writes stories or poems for you",
-    "isAI": true,
-    "explanation": "Generative AI models have been trained on vast amounts of text to understand language patterns and create original creative writing based on prompts."
   },
   {
     "name": "🎭 Deepfake videos that swap faces realistically",
@@ -35,11 +20,6 @@
     "explanation": "A newspaper is static printed text written by human journalists. It doesn't adapt, learn, or change based on who reads it."
   },
   {
-    "name": "🥫 A hand-powered can opener",
-    "isAI": false,
-    "explanation": "A can opener is a simple mechanical tool that uses leverage and a cutting wheel. It requires human power and doesn't make any decisions."
-  },
-  {
     "name": "🔢 A regular calculator that only adds and subtracts",
     "isAI": false,
     "explanation": "A basic calculator follows fixed mathematical rules programmed into it. It cannot learn new operations or solve problems it wasn't designed for."
@@ -50,19 +30,9 @@
     "explanation": "A mechanical watch uses springs, gears, and an escapement mechanism to keep time. It's pure precision engineering with no computational intelligence."
   },
   {
-    "name": "🚴 A bike that you pedal to move",
-    "isAI": false,
-    "explanation": "A bicycle converts your pedalling energy into motion through gears and a chain. It's entirely human-powered with no electronic components."
-  },
-  {
     "name": "📸 A regular camera that uses film",
     "isAI": false,
     "explanation": "A film camera uses optics and chemical processes to capture images. Unlike digital cameras with AI features, it has no computational processing."
-  },
-  {
-    "name": "💡 A light bulb you turn on with a switch",
-    "isAI": false,
-    "explanation": "A light bulb is a simple electrical circuit. When you flip the switch, electricity flows through the filament to produce light - no intelligence needed."
   },
   {
     "name": "🚥 A traffic light controlled by timers, not sensors",

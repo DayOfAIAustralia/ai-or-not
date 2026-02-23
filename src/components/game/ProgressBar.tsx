@@ -7,7 +7,7 @@ interface ProgressBarProps {
 export function ProgressBar({ current, total, score }: ProgressBarProps) {
   return (
     <>
-      <div className="flex items-center justify-between mb-3 md:mb-6">
+      <div className="flex items-center justify-between mb-3 md:mb-4">
         <span className="text-sm md:text-base font-medium text-gray-500">
           Question {current + 1} of {total}
         </span>

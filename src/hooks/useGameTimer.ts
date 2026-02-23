@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 interface UseGameTimerProps {
   duration: number;
   onTimeUp: () => void;
+  onTick?: (timeLeft: number) => void;
   isActive: boolean;
 }
 
@@ -14,14 +15,17 @@ interface UseGameTimerReturn {
 export function useGameTimer({
   duration,
   onTimeUp,
+  onTick,
   isActive,
 }: UseGameTimerProps): UseGameTimerReturn {
   const [timeLeft, setTimeLeft] = useState<number>(duration);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const onTimeUpRef = useRef(onTimeUp);
+  const onTickRef = useRef(onTick);
 
-  // Keep onTimeUp ref updated
+  // Keep refs updated
   onTimeUpRef.current = onTimeUp;
+  onTickRef.current = onTick;
 
   const clearTimer = useCallback(() => {
     if (timerRef.current) {
@@ -51,7 +55,9 @@ export function useGameTimer({
           onTimeUpRef.current();
           return 0;
         }
-        return prev - 1;
+        const next = prev - 1;
+        onTickRef.current?.(next);
+        return next;
       });
     }, 1000);
 

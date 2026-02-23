@@ -9,7 +9,7 @@ export function TimerBar({ timeLeft, duration, questionIndex }: TimerBarProps) {
   const formattedTime = `00:${timeLeft < 10 ? "0" + timeLeft : timeLeft}`;
 
   return (
-    <div className="mt-8 mb-4 md:mb-6">
+    <div className="mt-4 mb-4 md:mb-6">
       <div className="flex justify-between items-center mb-1">
         <span className="text-xs md:text-sm font-medium text-gray-600">
           Time
