@@ -26,20 +26,21 @@ export default function IndexPage() {
   const [showResult, setShowResult] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false);
 
-  const { play } = useSoundEffects();
+  const { play, stop } = useSoundEffects();
 
   const currentItem = items[currentIndex];
   const timerDuration = yearLevel === "primary" ? 30 : 20;
 
   const handleTimeUp = useCallback(() => {
-    play("timeUp");
+    stop("tick");
+    play("wrong");
     setLastAnswerCorrect(false);
     setShowResult(true);
-  }, [play]);
+  }, [play, stop]);
 
   const handleTick = useCallback(
     (timeLeft: number) => {
-      if (timeLeft <= 3 && timeLeft > 0) {
+      if (timeLeft === 9) {
         play("tick");
       }
     },
@@ -73,6 +74,7 @@ export default function IndexPage() {
   };
 
   const handleAnswer = (answeredAI: boolean) => {
+    stop("tick");
     const correct = answeredAI === currentItem.isAI;
     setLastAnswerCorrect(correct);
     if (correct) {

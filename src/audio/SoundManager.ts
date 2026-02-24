@@ -65,6 +65,13 @@ class SoundManager {
     });
   }
 
+  stop(name: SoundName) {
+    const audio = this.sounds.get(name);
+    if (!audio) return;
+    audio.pause();
+    audio.currentTime = 0;
+  }
+
   setMuted(muted: boolean) {
     this.muted = muted;
     if (muted) {

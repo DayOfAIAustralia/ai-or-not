@@ -4,14 +4,21 @@ import { SoundManager, SoundName } from "@/audio/SoundManager";
 export function useSoundEffects() {
   const unlockedRef = useRef(false);
 
-  const play = useCallback((name: SoundName) => {
-    const manager = SoundManager.getInstance();
+  const ensureUnlocked = useCallback(() => {
     if (!unlockedRef.current) {
-      manager.unlock();
+      SoundManager.getInstance().unlock();
       unlockedRef.current = true;
     }
-    manager.play(name);
   }, []);
 
-  return { play };
+  const play = useCallback((name: SoundName) => {
+    ensureUnlocked();
+    SoundManager.getInstance().play(name);
+  }, [ensureUnlocked]);
+
+  const stop = useCallback((name: SoundName) => {
+    SoundManager.getInstance().stop(name);
+  }, []);
+
+  return { play, stop };
 }
