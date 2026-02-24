@@ -7,28 +7,22 @@ interface GameOverScreenProps {
   score: number;
   total: number;
   currentLevel: number;
-  onPlayAgain: () => void;
   onNextLevel: () => void;
-  onBackToStart: () => void;
+  onSeeSummary: () => void;
 }
 
 export function GameOverScreen({
   score,
   total,
   currentLevel,
-  onPlayAgain,
   onNextLevel,
-  onBackToStart,
+  onSeeSummary,
 }: GameOverScreenProps) {
   const { play } = useSoundEffects();
   const percentage = Math.round((score / total) * 100);
 
   useEffect(() => {
-    if (percentage === 100) {
-      play("celebration");
-    } else {
-      play("levelComplete");
-    }
+    play("levelComplete");
   }, [percentage, play]);
 
   const getMessage = () => {
@@ -48,50 +42,42 @@ export function GameOverScreen({
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 pt-20 mt-4 md:pt-24 text-center bg-yellow">
-        <div className="bg-white dark:bg-gray-900 rounded-2xl md:rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-3 md:border-4 border-gray-900 p-5 md:p-8 lg:p-10 max-w-2xl">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-blue">
+      <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 pt-16 md:pt-20 text-center bg-yellow">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl md:rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] border-3 md:border-4 border-gray-900 p-4 md:p-6 lg:p-8 max-w-2xl">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-blue">
             Level {currentLevel} Complete!
           </h1>
 
-          <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 mb-4 md:mb-6 border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]">
+          <div className="bg-white rounded-xl md:rounded-2xl p-3 md:p-5 mb-3 md:mb-4 border-3 md:border-4 border-gray-900 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]">
             <p className="text-lg md:text-xl mb-1 md:mb-2">You got</p>
-            <p className="text-4xl md:text-5xl font-bold text-green mb-1 md:mb-2">
+            <p className="text-3xl md:text-4xl font-bold text-green mb-1 md:mb-2">
               {score} / {total}
             </p>
-            <p className="text-xl md:text-2xl font-semibold text-yellow">
+            <p className="text-lg md:text-xl font-semibold text-yellow">
               {percentage}% correct!
             </p>
           </div>
 
-          <p className="text-lg md:text-xl mb-4 md:mb-6">
+          <p className="text-lg md:text-xl mb-3 md:mb-4">
             {getEmoji()} {getMessage()}
           </p>
 
           <div className="flex flex-col gap-3 md:gap-4">
-            <GameButton
-              variant="primary"
-              onPress={onPlayAgain}
-              className="text-lg md:text-xl px-8 md:px-10 py-4 md:py-6"
-            >
-              Play Again
-            </GameButton>
-
             {currentLevel < 3 ? (
               <GameButton
                 variant="secondary"
                 onPress={onNextLevel}
-                className="text-lg md:text-xl px-8 md:px-10 py-4 md:py-6"
+                className="text-lg md:text-xl px-8 md:px-10 py-3 md:py-4"
               >
                 Next Level →
               </GameButton>
             ) : (
               <GameButton
                 variant="pink"
-                onPress={onBackToStart}
-                className="text-lg md:text-xl px-8 md:px-10 py-4 md:py-6"
+                onPress={onSeeSummary}
+                className="text-lg md:text-xl px-8 md:px-10 py-3 md:py-4"
               >
-                Back to Start
+                See Summary
               </GameButton>
             )}
           </div>

@@ -6,15 +6,16 @@ import primaryLevel3 from "@/questions/primary/level3.json";
 import secondaryLevel1 from "@/questions/secondary/level1.json";
 import secondaryLevel2 from "@/questions/secondary/level2.json";
 import secondaryLevel3 from "@/questions/secondary/level3.json";
-import { Item, YearLevel } from "@/types/game";
+import { Item, YearLevel, LevelScore } from "@/types/game";
 import { useGameTimer } from "@/hooks/useGameTimer";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { LandingScreen } from "@/components/screens/LandingScreen";
 import { LevelIntroScreen } from "@/components/screens/LevelIntroScreen";
 import { GameOverScreen } from "@/components/screens/GameOverScreen";
 import { GameScreen } from "@/components/screens/GameScreen";
+import { FinalFeedbackScreen } from "@/components/screens/FinalFeedbackScreen";
 
-type GameState = "landing" | "levelIntro" | "playing" | "gameOver";
+type GameState = "landing" | "levelIntro" | "playing" | "gameOver" | "finalFeedback";
 
 export default function IndexPage() {
   const [yearLevel, setYearLevel] = useState<YearLevel>(null);
@@ -25,6 +26,7 @@ export default function IndexPage() {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(false);
+  const [levelScores, setLevelScores] = useState<LevelScore[]>([]);
 
   const { play, stop } = useSoundEffects();
 
@@ -70,6 +72,7 @@ export default function IndexPage() {
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
+    setLevelScores([]);
     setGameState("playing");
   };
 
@@ -90,19 +93,14 @@ export default function IndexPage() {
     setShowResult(false);
     const nextIndex = currentIndex + 1;
     if (nextIndex >= items.length) {
+      setLevelScores((prev) => [
+        ...prev.filter((ls) => ls.level !== currentLevel),
+        { level: currentLevel, score, total: items.length },
+      ]);
       setGameState("gameOver");
     } else {
       setCurrentIndex(nextIndex);
     }
-  };
-
-  const handlePlayAgain = () => {
-    play("levelStart");
-    setItems(getLevelItems(currentLevel));
-    setCurrentIndex(0);
-    setScore(0);
-    setShowResult(false);
-    setGameState("playing");
   };
 
   const handleNextLevel = () => {
@@ -120,6 +118,10 @@ export default function IndexPage() {
     setGameState("playing");
   };
 
+  const handleSeeSummary = () => {
+    setGameState("finalFeedback");
+  };
+
   const handleBackToStart = () => {
     setGameState("landing");
     setCurrentLevel(1);
@@ -128,6 +130,7 @@ export default function IndexPage() {
     setCurrentIndex(0);
     setScore(0);
     setShowResult(false);
+    setLevelScores([]);
   };
 
   switch (gameState) {
@@ -154,8 +157,15 @@ export default function IndexPage() {
           score={score}
           total={items.length}
           currentLevel={currentLevel}
-          onPlayAgain={handlePlayAgain}
           onNextLevel={handleNextLevel}
+          onSeeSummary={handleSeeSummary}
+        />
+      );
+
+    case "finalFeedback":
+      return (
+        <FinalFeedbackScreen
+          levelScores={levelScores}
           onBackToStart={handleBackToStart}
         />
       );
